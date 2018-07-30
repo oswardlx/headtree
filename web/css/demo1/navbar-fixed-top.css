@@ -1,0 +1,16 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+#d1 {
+  margin: auto;
+  align-items: center;
+}
+
+a{
+  margin-outside: 10px;
+}
+div{
+  margin:0 auto;
+  text-align:center;
+}
