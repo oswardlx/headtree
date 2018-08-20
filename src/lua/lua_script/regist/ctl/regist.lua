@@ -26,11 +26,11 @@ end
 
 
 local ok ,err ,errno,sqlstate = db:connect{
-    host="47.254.25.109",
-    port=3306,
+    host="cdb-ek9ja7wm.cd.tencentcdb.com",
+    port=10000,
     database="ngx_test",
     user="root",
-    password = "Liuxinis1",
+    password = "Ilike$$$",
     max_packet_size=1024*1024
 }
 
@@ -44,7 +44,7 @@ local sql  = "insert into UserBase (UserEmail,UserPassword) values('123@123.com'
 local res ,err,errno,sqlstate= db:query(quote(sql))
 
 if not res then
-    ngx.say(cjson.encode({success = false,info=err}))
+    ngx.say(cjson.encode({success = false,info=err,info2=errno,sqlstate=sqlstate}))
     return
 end
 
